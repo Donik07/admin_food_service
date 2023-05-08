@@ -1,0 +1,17 @@
+= link_to 'Создать заказ (вручную)', :new_order
+|
+-# = link_to 'Создать заказ (автоматически)', :create_auto}
+
+- @order.each do |order|
+  .order-card
+    %h1
+      = order.title
+      |
+      = order.dishes
+      |
+      = order.amount
+      |
+      = order.point.name
+
+    %p (Название заказа, список блюд, сумма, филиал)
+    = link_to 'Удалить заказ', order_path(order), data: {turbo_method: :delete, turbo_confirm: "Вы уверены?"}

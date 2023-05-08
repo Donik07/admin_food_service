@@ -1,0 +1,30 @@
+= link_to 'Главная', :root
+%h1 Создать новый заказ:
+
+= form_for @order do |f|
+  %li
+    = f.label 'Название:'
+    = f.text_field :title
+  %li
+    = f.label 'Заказ:'
+    = f.text_field :dishes
+  %li
+    = f.label 'Сумма:'
+    = f.text_field :amount
+  %li
+    = f.label 'ФИО заказчика:'
+    = f.text_field :customer_name
+  %li
+    = f.label 'Телефон заказчика:'
+    = f.text_field :customer_phone
+  %li
+    = f.label 'Комментарий к заказу:'
+    = f.text_field :customer_comment
+  %li
+    = f.label 'Аккаунт:'
+    = f.number_field :account_id
+  %li
+    = f.label 'Сотрудник:'
+    = f.number_field :point_id
+
+  = button_tag 'Создать', type: 'submit'
