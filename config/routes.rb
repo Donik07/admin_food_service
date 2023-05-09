@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   root 'orders#index'
 
   resources :orders
+
+  jsonapi_resources :orders
 end
